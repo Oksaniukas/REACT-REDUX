@@ -21,6 +21,11 @@ function CountMinus() {
     dispatch({type: "MINUS", payload: 1000})
   }
 
+  function MinusYourAmount(num) {
+   dispatch({type: "MINUS", payload: num})
+}
+
+
    return (
       <div className="minus">
          <h1>MINUS:</h1>    
@@ -29,6 +34,7 @@ function CountMinus() {
             <button onClick={() => {MinusTen()}}> -10</button>
             <button onClick={() => {MinusHundred()}}> -100</button>
             <button onClick={() => {MinusThousand()}}> -1000</button>
+            <button onClick={() => {MinusYourAmount(Number(prompt()))}}> - Your amount</button>
          </div>
       </div>
    )

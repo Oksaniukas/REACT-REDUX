@@ -3,16 +3,25 @@ body {
 
 }
 
+
 .count {
   display: flex;
-  gap: 150px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 button {
   margin-right: 10px;
-  font-size: 30px;  
+  font-size: 30px; 
+  margin-bottom: 20px; 
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {

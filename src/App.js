@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Button from "./components/Button";
 import CountMinus from "./components/CountMinus";
 import CountPlus from "./components/CountPlus";
 
@@ -13,6 +14,9 @@ function App() {
       <div className="count">
         <CountMinus />
         <CountPlus />
+      </div>
+      <div>
+        <Button />
       </div>
     </div>
   );
