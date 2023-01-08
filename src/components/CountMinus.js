@@ -1,30 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-
+import { minusCountActionCreator} from "../store/countReducer";
 
 function CountMinus() {
    const dispatch = useDispatch();
-
-   function MinusOne() {
-      dispatch({type: "MINUS", payload: 1})
-   }
-   
-   function MinusTen() {
-      dispatch({type: "MINUS", payload: 10})
-   }
-
-   function MinusHundred() {
-      dispatch({type: "MINUS", payload: 100})
-   }
-  
-  function MinusThousand() {
-    dispatch({type: "MINUS", payload: 1000})
-  }
-
-  function MinusYourAmount(num) {
-   dispatch({type: "MINUS", payload: num})
-}
-
+   const MinusOne = () => dispatch(minusCountActionCreator(1))
+   const MinusTen = () => dispatch(minusCountActionCreator(10))
+   const MinusHundred = () => dispatch(minusCountActionCreator(100))
+   const MinusThousand = () => dispatch(minusCountActionCreator(1000))
+   const MinusYourAmount = (num) => dispatch(minusCountActionCreator(num))
 
    return (
       <div className="minus">

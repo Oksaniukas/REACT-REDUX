@@ -1,29 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { plusCountActionCreator } from "../store/countReducer";
 
 function CountPlus() {
    const dispatch = useDispatch();
-
-   function PlusOne() {
-      dispatch({type: "PLUS", payload: 1})
-   }
-   
-   function PlusTen() {
-      dispatch({type: "PLUS", payload: 10})
-   }
-
-   function PlusHundred() {
-      dispatch({type: "PLUS", payload: 100})
-   }
-  
-  function PlusThousand() {
-    dispatch({type: "PLUS", payload: 1000})
-  }
-
-  function PlusYourAmount(num) {
-   dispatch({type: "PLUS", payload: num})
-}
-
+   const PlusOne = () => dispatch(plusCountActionCreator(1))
+   const PlusTen = () => dispatch(plusCountActionCreator(10))
+   const PlusHundred = () => dispatch(plusCountActionCreator(100))
+   const PlusThousand = () => dispatch(plusCountActionCreator(1000))
+   const PlusYourAmount = (num) => dispatch(plusCountActionCreator(num))
 
    return (
       <div className="plus">
